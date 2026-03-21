@@ -885,7 +885,6 @@ h1 {
 @media (max-width: 900px) {
   .hero,
   .card-grid,
-  .services-layout,
   .contact {
     grid-template-columns: 1fr;
   }
@@ -893,6 +892,31 @@ h1 {
   .hero,
   .contact {
     display: grid;
+  }
+
+  .services-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .services-list,
+  .services-layout > .quote-card:first-of-type,
+  .mini-motto-card {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .services-list,
+  .service-item,
+  .services-layout > .quote-card,
+  .mini-motto-card {
+    width: 100%;
+  }
+
+  .services-layout > .quote-card,
+  .mini-motto-card {
+    margin-top: 0;
   }
 
   .section-heading-top {
