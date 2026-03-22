@@ -894,6 +894,103 @@ h1 {
     display: grid;
   }
 
+  .topbar,
+  main,
+  .contact,
+  .welcome-note {
+    width: min(100vw - 1.5rem, 42rem);
+  }
+
+  .topbar {
+    padding-top: 0.7rem;
+  }
+
+  .nav {
+    gap: 0.6rem;
+    font-size: 0.88rem;
+    flex-wrap: wrap;
+  }
+
+  .nav a {
+    min-height: 2.45rem;
+    padding: 0.4rem 0.9rem;
+  }
+
+  .welcome-note {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    padding: 1rem 1rem 0.9rem;
+  }
+
+  .welcome-note p {
+    font-size: clamp(1.15rem, 4.8vw, 1.55rem);
+  }
+
+  .note-signoff {
+    justify-self: start;
+    font-size: 0.95rem;
+  }
+
+  .hero {
+    gap: 1rem;
+    min-height: auto;
+    margin-top: 0.75rem;
+  }
+
+  .hero-panel,
+  .hero-card {
+    padding: 1.15rem;
+    min-height: auto;
+  }
+
+  .hero-title {
+    gap: 0.08em;
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: clamp(2.6rem, 12vw, 4.2rem);
+  }
+
+  .hero-text {
+    margin-top: 1rem;
+    font-size: 0.98rem;
+  }
+
+  .hero-actions {
+    margin-top: 1rem;
+  }
+
+  .hero-actions .button {
+    width: 100%;
+  }
+
+  .hero-side {
+    gap: 0.9rem;
+  }
+
+  .snapshot-top {
+    margin-top: 0.8rem;
+  }
+
+  .snapshot-role {
+    font-size: 0.78rem;
+    line-height: 1.45;
+  }
+
+  .tag-row {
+    gap: 0.5rem;
+  }
+
+  .info-tag {
+    font-size: 0.74rem;
+    padding: 0.45rem 0.75rem;
+  }
+
+  .section-heading {
+    margin-bottom: 1rem;
+  }
+
   .services-layout {
     display: flex;
     flex-direction: column;
@@ -921,40 +1018,65 @@ h1 {
 
   .section-heading-top {
     grid-template-columns: 1fr;
+    gap: 0.9rem;
   }
 
   .about-logo {
-    justify-content: flex-start;
-    justify-self: start;
+    justify-content: center;
+    justify-self: center;
+    margin-right: 0;
   }
 
-  .topbar {
-    width: min(1120px, calc(100vw - 1.5rem));
-    padding-top: 1rem;
+  .rc-logo-small {
+    width: 7.25rem;
   }
 
-  main,
-  .contact,
-  .welcome-note {
-    width: min(1120px, calc(100vw - 1.5rem));
+  .rc-logo-small span {
+    font-size: 3rem;
   }
 
-  .welcome-note {
-    grid-template-columns: 1fr;
-    padding-right: 1.15rem;
+  .card-grid {
+    gap: 0.9rem;
   }
 
-  .note-signoff {
-    justify-self: start;
+  .feature-card,
+  .service-item,
+  .quote-card {
+    padding: 1.2rem;
+    min-height: auto;
   }
 
-  .nav {
-    gap: 0.75rem;
-    font-size: 0.9rem;
+  .feature-card h3,
+  .service-item h3 {
+    font-size: 1.25rem;
   }
 
-  .hero-card h2 {
-    margin-top: 3rem;
+  .quote {
+    font-size: clamp(1.7rem, 7vw, 2.3rem);
+  }
+
+  .mini-quote {
+    font-size: clamp(1.25rem, 5vw, 1.65rem);
+  }
+
+  .contact {
+    gap: 1rem;
+    padding-bottom: 2rem;
+  }
+
+  .contact-actions {
+    width: 100%;
+    justify-items: stretch;
+  }
+
+  .contact .button-primary {
+    min-width: 100%;
+    min-height: 3.6rem;
+    padding: 0.95rem 1.2rem;
+  }
+
+  .contact-email {
+    text-align: center;
   }
 }
 
@@ -970,31 +1092,32 @@ h1 {
   }
 
   .hero {
-    min-height: auto;
-    margin-top: 2.5rem;
+    margin-top: 0.4rem;
   }
 
   .hero-card,
+  .hero-panel,
   .feature-card,
   .quote-card,
   .service-item {
     border-radius: 20px;
   }
 
-  .contact .button-primary {
-    min-width: 100%;
-  }
-
-  .contact-actions {
-    width: 100%;
-    justify-items: stretch;
-  }
-
-  .contact-email {
-    text-align: center;
-  }
-
   .stat-row {
     grid-template-columns: 1fr;
+  }
+
+  .profile-orb {
+    width: 4rem;
+    height: 4rem;
+    font-size: 1.55rem;
+  }
+
+  .rc-logo {
+    width: 7.4rem;
+  }
+
+  .rc-logo span {
+    font-size: 3.2rem;
   }
 }
