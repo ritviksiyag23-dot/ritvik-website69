@@ -883,6 +883,12 @@ h1 {
 }
 
 @media (max-width: 900px) {
+  .showcase,
+  .services,
+  .contact {
+    margin-top: 1.35rem;
+  }
+
   .hero,
   .card-grid,
   .contact {
@@ -991,6 +997,12 @@ h1 {
     margin-bottom: 1rem;
   }
 
+  .section-heading h2 {
+    max-width: 100%;
+    font-size: clamp(2rem, 8vw, 3rem);
+    line-height: 1.02;
+  }
+
   .services-layout {
     display: flex;
     flex-direction: column;
@@ -1022,9 +1034,7 @@ h1 {
   }
 
   .about-logo {
-    justify-content: center;
-    justify-self: center;
-    margin-right: 0;
+    display: none;
   }
 
   .rc-logo-small {
@@ -1044,6 +1054,14 @@ h1 {
   .quote-card {
     padding: 1.2rem;
     min-height: auto;
+  }
+
+  .extra-card {
+    padding: 0.9rem 1rem 1rem;
+  }
+
+  .logo-wrap {
+    padding-top: 0.55rem;
   }
 
   .feature-card h3,
@@ -1093,6 +1111,16 @@ h1 {
 
   .hero {
     margin-top: 0.4rem;
+  }
+
+  .showcase,
+  .services,
+  .contact {
+    margin-top: 1rem;
+  }
+
+  .welcome-note {
+    margin-top: 0.55rem;
   }
 
   .hero-card,
