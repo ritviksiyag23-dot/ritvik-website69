@@ -1,36 +1,3 @@
-const revealItems = document.querySelectorAll(".reveal");
-
-const revealObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  },
-  {
-    threshold: 0.05,
-    rootMargin: "0px 0px 120px 0px"
-  }
-);
-
-revealItems.forEach((item) => revealObserver.observe(item));
-
-function revealVisibleSections() {
-  revealItems.forEach((item) => {
-    const rect = item.getBoundingClientRect();
-    if (rect.top < window.innerHeight * 1.15) {
-      item.classList.add("is-visible");
-      revealObserver.unobserve(item);
-    }
-  });
-}
-
-window.addEventListener("load", revealVisibleSections);
-window.addEventListener("resize", revealVisibleSections);
-revealVisibleSections();
-
 const tiltCards = document.querySelectorAll("[data-tilt]");
 
 tiltCards.forEach((tiltCard) => {
