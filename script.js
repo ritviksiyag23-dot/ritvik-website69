@@ -9,10 +9,27 @@ const revealObserver = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.2 }
+  {
+    threshold: 0.05,
+    rootMargin: "0px 0px 120px 0px"
+  }
 );
 
 revealItems.forEach((item) => revealObserver.observe(item));
+
+function revealVisibleSections() {
+  revealItems.forEach((item) => {
+    const rect = item.getBoundingClientRect();
+    if (rect.top < window.innerHeight * 1.15) {
+      item.classList.add("is-visible");
+      revealObserver.unobserve(item);
+    }
+  });
+}
+
+window.addEventListener("load", revealVisibleSections);
+window.addEventListener("resize", revealVisibleSections);
+revealVisibleSections();
 
 const tiltCards = document.querySelectorAll("[data-tilt]");
 
