@@ -197,6 +197,38 @@
           <p class="contact-email">ritviksiyag23@gmail.com</p>
         </div>
       </section>
+
+      <section class="guestbook">
+        <div class="guestbook-card">
+          <div class="guestbook-copy">
+            <p class="eyebrow eyebrow-badge">Visitor Form</p>
+            <h2>Send me your name here.</h2>
+            <p class="guestbook-text">If someone wants to let you know they visited your website, they can submit this form and it will be sent to your email.</p>
+          </div>
+
+          <form
+            class="guestbook-form"
+            action="https://formsubmit.co/ritviksiyag23@gmail.com"
+            method="POST"
+          >
+            <input type="hidden" name="_subject" value="New website visitor for Ritvik Siyag">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <label class="guestbook-label" for="visitor-name">Your Name</label>
+            <div class="guestbook-input-row">
+              <input id="visitor-name" name="name" type="text" maxlength="40" placeholder="Enter your name" required>
+              <button class="button button-primary guestbook-button" type="submit">Send</button>
+            </div>
+            <label class="guestbook-label" for="visitor-message">Message</label>
+            <textarea id="visitor-message" name="message" maxlength="250" placeholder="Write a short message if you want"></textarea>
+          </form>
+
+          <div class="guestbook-list-wrap">
+            <p class="guestbook-title">How it works</p>
+            <p class="guestbook-empty">When someone submits this form, the details go to your email with their consent.</p>
+          </div>
+        </div>
+      </section>
     </main>
   </div>
 

@@ -258,7 +258,8 @@ main {
 .hero,
 .showcase,
 .services,
-.contact {
+.contact,
+.guestbook {
   margin-top: 4rem;
 }
 
@@ -833,6 +834,137 @@ h1 {
   padding: 2rem 0 4rem;
 }
 
+.guestbook {
+  margin-top: 1.2rem;
+}
+
+.guestbook-card {
+  position: relative;
+  padding: 1.7rem;
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.03) 48%, transparent 49%),
+    linear-gradient(145deg, rgba(9, 16, 29, 0.8), rgba(16, 30, 54, 0.72));
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+}
+
+.guestbook-card::after {
+  content: "";
+  position: absolute;
+  inset: auto -5% -25% auto;
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.08), transparent 70%);
+  pointer-events: none;
+}
+
+.guestbook-copy h2 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  max-width: 10ch;
+}
+
+.guestbook-text {
+  margin: 0.9rem 0 0;
+  color: var(--muted);
+  max-width: 56ch;
+  line-height: 1.7;
+}
+
+.guestbook-form {
+  margin-top: 1.4rem;
+}
+
+.guestbook-label {
+  display: block;
+  margin-bottom: 0.55rem;
+  color: #e8f1ff;
+  font-size: 0.92rem;
+  letter-spacing: 0.04em;
+}
+
+.guestbook-input-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.8rem;
+}
+
+.guestbook-input-row input {
+  width: 100%;
+  min-height: 3.6rem;
+  padding: 0.95rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 1rem;
+  outline: none;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.03) 48%, transparent 49%),
+    rgba(7, 12, 23, 0.5);
+  color: var(--text);
+  font: inherit;
+  backdrop-filter: blur(12px);
+}
+
+.guestbook-input-row input::placeholder {
+  color: #aebcd4;
+}
+
+.guestbook-input-row input:focus {
+  border-color: rgba(180, 212, 255, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(138, 185, 255, 0.12);
+}
+
+.guestbook-form textarea {
+  width: 100%;
+  min-height: 7rem;
+  margin-top: 0.7rem;
+  padding: 0.95rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 1rem;
+  outline: none;
+  resize: vertical;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.03) 48%, transparent 49%),
+    rgba(7, 12, 23, 0.5);
+  color: var(--text);
+  font: inherit;
+  backdrop-filter: blur(12px);
+}
+
+.guestbook-form textarea::placeholder {
+  color: #aebcd4;
+}
+
+.guestbook-form textarea:focus {
+  border-color: rgba(180, 212, 255, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(138, 185, 255, 0.12);
+}
+
+.guestbook-button {
+  min-width: 9rem;
+  min-height: 3.6rem;
+}
+
+.guestbook-list-wrap {
+  margin-top: 1.4rem;
+  padding: 1rem 1.1rem;
+  border-radius: 1.2rem;
+  background: rgba(0, 0, 0, 0.22);
+}
+
+.guestbook-title {
+  margin: 0;
+  color: #eef6ff;
+  font-weight: 700;
+}
+
+.guestbook-empty {
+  margin: 0.9rem 0 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
 .contact h2 {
   font-size: clamp(2.4rem, 5vw, 4.4rem);
   max-width: 13ch;
@@ -897,7 +1029,8 @@ h1 {
 @media (max-width: 900px) {
   .showcase,
   .services,
-  .contact {
+  .contact,
+  .guestbook {
     margin-top: 1.35rem;
   }
 
@@ -1094,6 +1227,18 @@ h1 {
     padding-bottom: 2rem;
   }
 
+  .guestbook-card {
+    padding: 1.2rem;
+  }
+
+  .guestbook-input-row {
+    grid-template-columns: 1fr;
+  }
+
+  .guestbook-button {
+    width: 100%;
+  }
+
   .contact-actions {
     width: 100%;
     justify-items: stretch;
@@ -1127,7 +1272,8 @@ h1 {
 
   .showcase,
   .services,
-  .contact {
+  .contact,
+  .guestbook {
     margin-top: 1rem;
   }
 
