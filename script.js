@@ -26,6 +26,7 @@ const heroPanel = document.querySelector(".hero-panel");
 const heroSide = document.querySelector(".hero-side");
 const topHeroCard = document.querySelector(".hero-side .hero-card:not(.extra-card)");
 const extraCard = document.querySelector(".extra-card");
+const visitCounterNumber = document.querySelector("#visit-counter-number");
 
 function syncHeroCardHeights() {
   if (!heroPanel || !heroSide || !topHeroCard || !extraCard) {
@@ -47,3 +48,24 @@ function syncHeroCardHeights() {
 window.addEventListener("load", syncHeroCardHeights);
 window.addEventListener("resize", syncHeroCardHeights);
 syncHeroCardHeights();
+
+async function updateVisitCounter() {
+  if (!visitCounterNumber) {
+    return;
+  }
+
+  try {
+    const response = await fetch("https://api.counterapi.dev/v1/ritvik-siyag/personal-card/up");
+    if (!response.ok) {
+      throw new Error("Counter request failed");
+    }
+
+    const data = await response.json();
+    const count = data.count ?? data.value ?? 0;
+    visitCounterNumber.textContent = String(count);
+  } catch {
+    visitCounterNumber.textContent = "N/A";
+  }
+}
+
+updateVisitCounter();

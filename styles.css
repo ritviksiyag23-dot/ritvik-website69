@@ -259,7 +259,8 @@ main {
 .showcase,
 .services,
 .contact,
-.guestbook {
+.guestbook,
+.visit-counter {
   margin-top: 4rem;
 }
 
@@ -838,6 +839,10 @@ h1 {
   margin-top: 1.2rem;
 }
 
+.visit-counter {
+  margin-top: 1rem;
+}
+
 .guestbook-card {
   position: relative;
   padding: 1.7rem;
@@ -848,6 +853,32 @@ h1 {
     linear-gradient(145deg, rgba(9, 16, 29, 0.8), rgba(16, 30, 54, 0.72));
   box-shadow: var(--shadow);
   backdrop-filter: blur(18px);
+}
+
+.visit-counter-card {
+  position: relative;
+  padding: 1.55rem;
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.03) 48%, transparent 49%),
+    linear-gradient(145deg, rgba(9, 16, 29, 0.8), rgba(16, 30, 54, 0.72));
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+  text-align: center;
+}
+
+.visit-counter-number {
+  margin: 0.85rem 0 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(3rem, 8vw, 5rem);
+  line-height: 1;
+  color: #f7fbff;
+}
+
+.visit-counter-text {
+  margin: 0.65rem 0 0;
+  color: var(--muted);
 }
 
 .guestbook-card::after {
@@ -1030,7 +1061,8 @@ h1 {
   .showcase,
   .services,
   .contact,
-  .guestbook {
+  .guestbook,
+  .visit-counter {
     margin-top: 1.35rem;
   }
 
@@ -1231,6 +1263,10 @@ h1 {
     padding: 1.2rem;
   }
 
+  .visit-counter-card {
+    padding: 1.2rem;
+  }
+
   .guestbook-input-row {
     grid-template-columns: 1fr;
   }
@@ -1273,7 +1309,8 @@ h1 {
   .showcase,
   .services,
   .contact,
-  .guestbook {
+  .guestbook,
+  .visit-counter {
     margin-top: 1rem;
   }
 
